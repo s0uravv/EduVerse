@@ -1,19 +1,20 @@
 
 import React from "react";
 import TechMandiImg from "../assets/TechMandi.jpg";
-// import LaptopImg from "../assets/cat-laptop.jpg";
-// import CameraImg from "../assets/cat-camera.jpg";
-// import KitchenImg from "../assets/cat-kitchen.jpg";
-// import AudioImg from "../assets/cat-audio.jpg";
-// import WearableImg from "../assets/cat-wearable.jpg";
+//import TechMandiImg from "./TechMandi.jpg";
+import LaptopImg from "../assets/phone.jpg";
+import CameraImg from "../assets/laptop.jpg";
+import KitchenImg from "../assets/earbuds.jpg";
+import AudioImg from "../assets/headphone.jpg";
+import WearableImg from "../assets/speaker.jpg";
 
 const categories = [
     { id: 1, title: "Mobiles", img: TechMandiImg },
-    { id: 2, title: "Laptops", img: TechMandiImg },
-    { id: 3, title: "Cameras", img: TechMandiImg },
-    { id: 4, title: "Kitchen", img: TechMandiImg },
-    { id: 5, title: "Audio", img: TechMandiImg },
-    { id: 6, title: "Wearables", img: TechMandiImg }
+    { id: 2, title: "Laptops", img: LaptopImg },
+    { id: 3, title: "Cameras", img: CameraImg },
+    { id: 4, title: "Kitchen", img: KitchenImg },
+    { id: 5, title: "Audio", img: AudioImg },
+    { id: 6, title: "Wearables", img: WearableImg }
 ];
 const CategorySection = () => (
     <section className="py-8 bg-white">
