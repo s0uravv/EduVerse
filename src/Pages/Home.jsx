@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider1 from "../assets/Slider1.svg";
 import HomeCategories from "../Components/Home-Categories/Home-Categories";
+import PopularProducts from "../Components/PopularProducts/PopularProducts";
 function Home() {
     return (
         <div>
@@ -13,6 +14,7 @@ function Home() {
                 />
             </div>
             <HomeCategories />
+            <PopularProducts />
         </div>
     );
 }
