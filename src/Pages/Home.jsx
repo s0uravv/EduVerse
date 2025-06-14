@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Slider1 from "../assets/Slider1.svg";
 import HomeCategories from "../Components/Home-Categories/Home-Categories";
 import PopularProducts from "../Components/PopularProducts/PopularProducts";
+import Offers from "../Components/Offers/Offers";
 function Home() {
     return (
         <div>
@@ -14,6 +15,7 @@ function Home() {
                 />
             </div>
             <HomeCategories />
+            <Offers />
             <PopularProducts />
         </div>
     );
