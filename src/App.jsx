@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/Home";
 import Categories from "./Pages/Categories";
 import Order from "./Pages/Order";
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/orders" element={<Order />} />
                 <Route path="/Product/:id" element={<ProductInfo />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     );
 }

@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <nav className="px-5 sticky top-0 z-10 backdrop-blur background-white/30 border-b border-black/80">
             <div className="max-w-7xl mx-auto  py-3 flex items-center justify-between">
-                {/* Logo */}
+                
                 <Link to="/">
                     {" "}
                     <div className="flex items-center p-0 m-0 rounded-8xl">
@@ -47,7 +47,6 @@ function Navbar() {
                     </button>
                 </div>
 
-                {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-6 font-medium">
                     <li>
                         <a href="#">Home</a>
