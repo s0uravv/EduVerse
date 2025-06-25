@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Signup = () => {
     const [form, setForm] = useState({
         name: "",
@@ -7,7 +8,7 @@ const Signup = () => {
         password: "",
         confirmPassword: ""
     });
-
+    const navigate = useNavigate();
     const handleChange = e => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
@@ -20,9 +21,18 @@ const Signup = () => {
             return;
         }
 
-        // You can send this data to your backend API
+        const { name, email, password } = form;
+
+        axios
+            .post("http://localhost:3001/register", { name, email, password })
+            .then(result => {
+                console.log(result);
+                navigate("/login");
+            })
+            .catch(err => console.log(err));
+
         console.log("Form Data:", form);
-        alert("Account created!");
+        
     };
 
     return (

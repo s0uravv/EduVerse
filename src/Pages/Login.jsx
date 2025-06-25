@@ -1,15 +1,31 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const login = () => {
+const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
-    const handleLogin = e => {
+    const handleLogin = async e => {
         e.preventDefault();
-        // Here, you'd usually call an API to login
-        console.log("Email:", email);
-        console.log("Password:", password);
-        alert("Login clicked!");
+
+        try {
+            const response = await axios.post(
+                "http://localhost:3001/login",
+                { email, password },
+                { withCredentials: true }
+            );
+
+            if (response.data.message === "Login successful") {
+                navigate("/categories");
+            } else {
+                alert("Invalid credentials");
+            }
+        } catch (err) {
+            alert("Login failed");
+            console.log(err);
+        }
     };
 
     return (
@@ -25,8 +41,8 @@ const login = () => {
                         </label>
                         <input
                             type="email"
-                            required
                             value={email}
+                            required
                             onChange={e => setEmail(e.target.value)}
                             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="you@gmail.com"
@@ -38,8 +54,8 @@ const login = () => {
                         </label>
                         <input
                             type="password"
-                            required
                             value={password}
+                            required
                             onChange={e => setPassword(e.target.value)}
                             className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="••••••••"
@@ -54,13 +70,16 @@ const login = () => {
                 </form>
                 <p className="text-sm text-center text-gray-500 mt-4">
                     Don’t have an account?{" "}
-                    <a href="/signup" className="text-blue-600 hover:underline">
+                    <Link
+                        to="/signup"
+                        className="text-blue-600 hover:underline"
+                    >
                         Register
-                    </a>
+                    </Link>
                 </p>
             </div>
         </div>
     );
 };
 
-export default login;
+export default Login;
