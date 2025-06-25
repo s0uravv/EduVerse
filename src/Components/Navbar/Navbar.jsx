@@ -60,7 +60,7 @@ function Navbar() {
                         <Link to="#">Contact</Link>
                     </li>
                     <li className="bg-[#040421] text-white border rounded-2xl px-2 ">
-                        <Link to="#">Login</Link>
+                        <Link to="/login">Login</Link>
                     </li>
                 </ul>
             </div>
