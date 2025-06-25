@@ -9,7 +9,6 @@ function Navbar() {
     return (
         <nav className="px-5 sticky top-0 z-10 backdrop-blur background-white/30 border-b border-black/80">
             <div className="max-w-7xl mx-auto  py-3 flex items-center justify-between">
-                
                 <Link to="/">
                     {" "}
                     <div className="flex items-center p-0 m-0 rounded-8xl">
@@ -18,7 +17,7 @@ function Navbar() {
                             src="/eduverse-logo.png"
                             alt="My Icon"
                         />
-                        <p className="text-2xl font-bold text-black px-2">
+                        <p className="text-2xl font-bold text-orange-500 px-2">
                             EduVerse
                         </p>
                     </div>
@@ -49,16 +48,19 @@ function Navbar() {
 
                 <ul className="hidden md:flex space-x-6 font-medium">
                     <li>
-                        <a href="#">Home</a>
+                        <Link to="#">Home</Link>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <Link to="#">About</Link>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <Link to="#">Services</Link>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <Link to="#">Contact</Link>
+                    </li>
+                    <li className="bg-[#040421] text-white border rounded-2xl px-2 ">
+                        <Link to="#">Login</Link>
                     </li>
                 </ul>
             </div>
@@ -68,24 +70,44 @@ function Navbar() {
                 <div className="md:hidden px-4 pb-4">
                     <ul className="space-y-4 text-base font-medium">
                         <li>
-                            <a href="#" onClick={() => setIsOpen(false)}>
+                            <Link
+                                to="#"
+                                className="hover:underline underline-offset-4 decoration-orange-500"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" onClick={() => setIsOpen(false)}>
+                            <Link
+                                to="#"
+                                className="hover:underline underline-offset-4 decoration-orange-500"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" onClick={() => setIsOpen(false)}>
+                            <Link
+                                to="#"
+                                className="hover:underline underline-offset-4 decoration-orange-500"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Services
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" onClick={() => setIsOpen(false)}>
+                            <Link
+                                to="#"
+                                className="hover:underline underline-offset-4 decoration-orange-500"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {" "}
                                 Contact
-                            </a>
+                            </Link>
+                        </li>
+                        <li className="w-fit bg-[#040421] text-white border rounded-2xl px-3 py-1 hover:bg-orange-500">
+                            <Link to="/login">Login</Link>
                         </li>
                     </ul>
                 </div>
