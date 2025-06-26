@@ -39,7 +39,7 @@ const Signup = () => {
                 }
             );
             console.log(response);
-            navigate("/login");
+                navigate("/login");
         } catch (err) {
             console.log(err);
             alert("Registration failed");

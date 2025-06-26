@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import QotdDisplay from ".././QotdDisplay";
 import axios from "axios";
 import { Pie, Line } from "react-chartjs-2";
 import {
@@ -78,7 +79,12 @@ function DashboardHome() {
                 <span className="text-[#0b0625]">{user?.name || "User"}</span>
             </h1>
 
-            {/* QOTD */}
+
+           <QotdDisplay />
+
+
+
+            {/* QOTD 
             <div className="bg-[#0b0625] rounded-xl shadow p-6 border border-orange-500/40">
                 <h2 className="text-2xl text-white font-bold pb-2">
                     Question of the Day
@@ -101,7 +107,7 @@ function DashboardHome() {
                 </button>
             </div>
 
-            {/* Two-column layout */}
+             Two-column layout */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Weekly Progress Graph */}
                 <div className="bg-white rounded-xl p-6 border border-black/10">

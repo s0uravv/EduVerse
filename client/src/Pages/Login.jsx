@@ -18,13 +18,20 @@ const Login = () => {
             );
 
             if (response.data.message === "Login successful") {
-                navigate("/dashboard");
+                const userRole = response.data.role;
+                if (userRole === "Student") {
+                    navigate("/dashboard");
+                } else if (userRole === "Teacher") {
+                    navigate("/teacher-dashboard");
+                } else {
+                    alert("Unknown role");
+                }
             } else {
                 alert("Invalid credentials");
             }
         } catch (err) {
             alert("Login failed");
-            console.log(err);
+            console.error(err);
         }
     };
 

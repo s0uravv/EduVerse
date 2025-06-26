@@ -34,14 +34,57 @@ app.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const user = await UserModel.findOne({ email });
 
-    if (!user || user.password !== password) {
+    if (!user || user.password !== password ) {
         return res.status(401).json({ message: "Invalid credentials" });
     }
 
     const token = jwt.sign({ id: user._id }, SECRET_KEY, { expiresIn: "1d" });
-
-    res.cookie("token", token).json({ message: "Login successful" });
+    
+        res.cookie("token", token).json({ message: "Login successful",
+        role:user.role
+        });
+    
 });
+
+const QotdModel = require("./Models/Qotd");
+
+// ✅ GET current QOTD
+app.get("/qotd", async (req, res) => {
+    try {
+        const existing = await QotdModel.findOne();
+        if (existing) {
+            res.json({ question: existing.question });
+        } else {
+            res.json({ question: null });
+        }
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch QOTD" });
+    }
+});
+
+// ✅ POST new QOTD (replace old one)
+app.post("/qotd", async (req, res) => {
+    const { question } = req.body;
+    if (!question || question.trim() === "") {
+        return res.status(400).json({ error: "Question is required" });
+    }
+
+    try {
+        // Delete any existing question
+        await QotdModel.deleteMany();
+
+        // Insert new question
+        const newQuestion = await QotdModel.create({ question });
+
+        res.json({
+            message: "QOTD updated successfully",
+            question: newQuestion.question
+        });
+    } catch (err) {
+        res.status(500).json({ error: "Failed to set QOTD" });
+    }
+});
+
 
 app.get("/categories", (req, res) => {
     const token = req.cookies.token;
