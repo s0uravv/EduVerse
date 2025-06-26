@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import MyIcon from "../../assets/react.svg";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState("");
 
     return (
-        <nav className="px-5 sticky top-0 z-10 backdrop-blur background-white/30 border-b border-black/80">
-            <div className="max-w-7xl mx-auto  py-3 flex items-center justify-between">
+        <nav className="px-5 sticky top-0 z-10 bg-white/30 backdrop-blur-lg border-b border-black/10">
+            <div className="max-w-7xl mx-auto py-3 flex items-center justify-between">
                 <Link to="/">
-                    {" "}
-                    <div className="flex items-center p-0 m-0 rounded-8xl">
+                    <div className="flex items-center">
                         <img
-                            className="w-10 h-10 block p-0 m-0 rounded-2xl"
+                            className="w-10 h-10 rounded-2xl"
                             src="/eduverse-logo.png"
-                            alt="My Icon"
+                            alt="Logo"
                         />
                         <p className="text-2xl font-bold text-orange-500 px-2">
                             EduVerse
@@ -23,23 +20,23 @@ function Navbar() {
                     </div>
                 </Link>
 
-                <div className="md:hidden">
+                <div className="md:hidden px-1">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="relative w-8 h-8 focus:outline-none"
+                        className="relative w-8 h-8"
                     >
                         <span
-                            className={`absolute h-1 w-8 bg-orange-500 rounded transition-all duration-300 ease-in-out ${
+                            className={`absolute h-1 w-8 bg-orange-500 rounded transition-all duration-300 ${
                                 isOpen ? "rotate-45 top-3.5" : "top-2"
                             }`}
                         />
                         <span
-                            className={`absolute h-1 w-8 bg-orange-500 rounded transition-all duration-300 ease-in-out ${
+                            className={`absolute h-1 w-8 bg-orange-500 rounded transition-all duration-300 ${
                                 isOpen ? "opacity-0" : "top-4"
                             }`}
                         />
                         <span
-                            className={`absolute h-1 w-8 bg-orange-500 rounded transition-all duration-300 ease-in-out ${
+                            className={`absolute h-1 w-8 bg-orange-500 rounded transition-all duration-300 ${
                                 isOpen ? "-rotate-45 top-3.5" : "top-6"
                             }`}
                         />
@@ -59,54 +56,36 @@ function Navbar() {
                     <li>
                         <Link to="#">Contact</Link>
                     </li>
-                    <li className="bg-[#040421] text-white border rounded-2xl px-2 ">
+                    <li className="bg-[#040421] text-white rounded-2xl px-2">
                         <Link to="/login">Login</Link>
                     </li>
                 </ul>
             </div>
 
-            {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden px-4 pb-4">
-                    <ul className="space-y-4 text-base font-medium">
+                <div className="md:hidden pb-4">
+                    <ul className="px-6 space-y-4 text-base font-medium">
                         <li>
-                            <Link
-                                to="#"
-                                className="hover:underline underline-offset-4 decoration-orange-500"
-                                onClick={() => setIsOpen(false)}
-                            >
+                            <Link to="#" onClick={() => setIsOpen(false)}>
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="#"
-                                className="hover:underline underline-offset-4 decoration-orange-500"
-                                onClick={() => setIsOpen(false)}
-                            >
+                            <Link to="#" onClick={() => setIsOpen(false)}>
                                 About
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="#"
-                                className="hover:underline underline-offset-4 decoration-orange-500"
-                                onClick={() => setIsOpen(false)}
-                            >
+                            <Link to="#" onClick={() => setIsOpen(false)}>
                                 Services
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="#"
-                                className="hover:underline underline-offset-4 decoration-orange-500"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {" "}
+                            <Link to="#" onClick={() => setIsOpen(false)}>
                                 Contact
                             </Link>
                         </li>
-                        <li className="w-fit bg-[#040421] text-white border rounded-2xl px-3 py-1 hover:bg-orange-500">
+                        <li className="w-fit bg-[#040421] text-white rounded-2xl px-3 py-1 hover:bg-orange-500">
                             <Link to="/login">Login</Link>
                         </li>
                     </ul>
