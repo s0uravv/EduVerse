@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import FeatureSection from "./FeatureSection";
 import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 const HeroSection = () => (
+   
     <div className="bg-white">
+      <Navbar />
         <section className="relative w-full px-4 py-8 overflow-hidden">
             <div className="max-w-6xl mx-auto flex justify-center items-center">
                 <img
