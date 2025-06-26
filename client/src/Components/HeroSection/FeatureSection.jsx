@@ -5,7 +5,7 @@ const FeatureSection = () => {
         <div className="flex flex-col items-center w-full">
             {/* Section 1 */}
             <section className="w-full bg-white px-6 py-12">
-                <div className="flex flex-col lg:flex-row items-center justify-between max-w-6xl mx-auto gap-10">
+                <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto gap-10">
                     {/* Text */}
                     <div className="w-full lg:w-1/2 lg:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4">
