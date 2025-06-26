@@ -18,7 +18,7 @@ const Login = () => {
             );
 
             if (response.data.message === "Login successful") {
-                navigate("/categories");
+                navigate("/dashboard");
             } else {
                 alert("Invalid credentials");
             }
