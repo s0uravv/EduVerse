@@ -3,7 +3,8 @@ import Home from "./Components/HeroSection/HeroSection";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Dashboard from "./Pages/dashboard";
-import TeacherDashboard from "./Components/Dashboard//TeacherDashboard";
+import DashboardTeacher from "./Pages/dashboardteacher";
+//import DashboardTeacher from "./Components/DashboardTeacher/DashboardTeacher";
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route
                     path="/teacher-dashboard"
-                    element={<TeacherDashboard />}
+                    element={<DashboardTeacher />}
                 />
             </Routes>
         </BrowserRouter>

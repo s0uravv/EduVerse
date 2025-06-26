@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const TeacherDashboard = () => {
+const DashboardTeacher = () => {
     const [teacher, setTeacher] = useState(null);
     const [question, setQuestion] = useState("");
     const [existingQotd, setExistingQotd] = useState("");
@@ -77,4 +77,4 @@ const TeacherDashboard = () => {
     );
 };
 
-export default TeacherDashboard;
+export default DashboardTeacher;

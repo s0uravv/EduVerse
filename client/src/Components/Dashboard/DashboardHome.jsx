@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import QotdDisplay from ".././QotdDisplay";
+import QotdDisplay from "./QotdDisplay";
 import axios from "axios";
 import { Pie, Line } from "react-chartjs-2";
 import {
@@ -79,10 +79,7 @@ function DashboardHome() {
                 <span className="text-[#0b0625]">{user?.name || "User"}</span>
             </h1>
 
-
-           <QotdDisplay />
-
-
+            <QotdDisplay />
 
             {/* QOTD 
             <div className="bg-[#0b0625] rounded-xl shadow p-6 border border-orange-500/40">
