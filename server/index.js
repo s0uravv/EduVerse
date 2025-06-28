@@ -48,7 +48,7 @@ app.post("/login", async (req, res) => {
 
 const QotdModel = require("./Models/Qotd");
 
-// ✅ GET current QOTD
+
 app.get("/qotd", async (req, res) => {
     try {
         const existing = await QotdModel.findOne();
@@ -62,7 +62,7 @@ app.get("/qotd", async (req, res) => {
     }
 });
 
-// ✅ POST new QOTD (replace old one)
+
 app.post("/qotd", async (req, res) => {
     const { question } = req.body;
     if (!question || question.trim() === "") {
@@ -70,12 +70,8 @@ app.post("/qotd", async (req, res) => {
     }
 
     try {
-        // Delete any existing question
         await QotdModel.deleteMany();
-
-        // Insert new question
         const newQuestion = await QotdModel.create({ question });
-
         res.json({
             message: "QOTD updated successfully",
             question: newQuestion.question

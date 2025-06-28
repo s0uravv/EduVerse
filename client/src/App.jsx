@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Dashboard from "./Pages/dashboard";
 import DashboardTeacher from "./Pages/dashboardteacher";
+import AddQotd from "./Components/DashboardTeacher/AddQotd";
 //import DashboardTeacher from "./Components/DashboardTeacher/DashboardTeacher";
 
 function App() {
@@ -17,6 +18,14 @@ function App() {
                 <Route
                     path="/teacher-dashboard"
                     element={<DashboardTeacher />}
+                />
+                <Route
+                    path="/teacher-dashboard"
+                    element={<DashboardTeacher />}
+                />
+                <Route
+                    path="/addqotd"
+                    element={<AddQotd />}
                 />
             </Routes>
         </BrowserRouter>

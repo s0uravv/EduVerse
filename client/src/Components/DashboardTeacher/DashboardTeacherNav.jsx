@@ -66,6 +66,7 @@ function DashboardTeacherNav() {
                     <Link to="/">Dashboard</Link>
                     <Link to="/profile">Profile</Link>
                     <Link to="/students">Students</Link>
+                    <Link to="/addqotd">Add QOTD</Link>
                     <Link to="/doubt">Ask Doubt</Link>
                     <Link to="/attendence">Attendence</Link>
                     <Link to="/test">Test</Link>

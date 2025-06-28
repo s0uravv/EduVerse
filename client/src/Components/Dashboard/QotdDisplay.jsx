@@ -22,7 +22,6 @@ const QotdDisplay = () => {
         if (answer.trim()) {
             alert("Answer submitted successfully!");
             setAnswer("");
-            // Optionally: send to server if storing answers
         }
     };
 
