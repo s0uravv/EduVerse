@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState } from "react";
-import axios from "../../axios";
+import axios from "axios";
 
 const AddQotd = () => {
     const [teacher, setTeacher] = useState(null);
@@ -9,27 +8,36 @@ const AddQotd = () => {
     const [answers, setAnswers] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/dashboard").then(res => {
-            setTeacher(res.data);
-        });
+        axios
+            .get("http://localhost:3001/dashboard", { withCredentials: true })
+            .then(res => setTeacher(res.data))
+            .catch(() => setTeacher(null));
 
-        axios.get("http://localhost:3001/qotd").then(res => {
-            if (res.data.question) setExistingQotd(res.data.question);
-        });
+        axios
+            .get("http://localhost:3001/qotd")
+            .then(res => {
+                if (res.data.question) setExistingQotd(res.data.question);
+            })
+            .catch(err => console.log(err));
 
-        axios.get("http://localhost:3001/all-answers").then(res => {
-            setAnswers(res.data);
-        });
+        axios
+            .get("http://localhost:3001/all-answers")
+            .then(res => setAnswers(res.data))
+            .catch(err => console.log(err));
     }, []);
 
     const handleQuestionSubmit = async () => {
         if (!question.trim()) return alert("Question cannot be empty.");
         try {
-            await axios.post("http://localhost:3001/qotd", { question });
+            await axios.post(
+                "http://localhost:3001/qotd",
+                { question },
+                { withCredentials: true }
+            );
             alert("Question updated!");
             setExistingQotd(question);
             setQuestion("");
-        } catch {
+        } catch (err) {
             alert("Failed to update question.");
         }
     };
