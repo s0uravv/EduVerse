@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -10,8 +10,9 @@ const QotdModel = require("./Models/Qotd");
 const AnswerModel = require("./Models/Answer");
 
 const app = express();
-const SECRET_KEY = "saurabh88899@";
-
+const SECRET_KEY = process.env.JWT_SECRET;;
+const PORT = process.env.PORT;
+const MONGO_URI=process.env.MONGO_URI;
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -21,9 +22,7 @@ app.use(
     })
 );
 
-mongoose.connect(
-    "mongodb+srv://The_Sourav_Pandey:saurabh88899%40@cluster0.zqrrxlw.mongodb.net/EduVerse?retryWrites=true&w=majority"
-);
+mongoose.connect(MONGO_URI);
 
 // Register
 app.post("/register", async (req, res) => {
@@ -46,11 +45,12 @@ app.post("/login", async (req, res) => {
 
     const token = jwt.sign({ id: user._id }, SECRET_KEY, { expiresIn: "1d" });
 
-    res.cookie("token", token, {
-        httpOnly: true,
-        sameSite: "Lax",
-        secure: false
-    }).json({
+   res.cookie("token", token, {
+    httpOnly: true,
+    sameSite: "Lax",
+    secure: false,
+    maxAge: 24 * 60 * 60 * 1000 
+}).json({
         message: "Login successful",
         role: user.role
     });
