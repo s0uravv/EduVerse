@@ -10,9 +10,9 @@ const QotdModel = require("./Models/Qotd");
 const AnswerModel = require("./Models/Answer");
 
 const app = express();
-const SECRET_KEY = process.env.JWT_SECRET;;
+const SECRET_KEY = process.env.JWT_SECRET;
 const PORT = process.env.PORT;
-const MONGO_URI=process.env.MONGO_URI;
+const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -45,12 +45,12 @@ app.post("/login", async (req, res) => {
 
     const token = jwt.sign({ id: user._id }, SECRET_KEY, { expiresIn: "1d" });
 
-   res.cookie("token", token, {
-    httpOnly: true,
-    sameSite: "Lax",
-    secure: false,
-    maxAge: 24 * 60 * 60 * 1000 
-}).json({
+    res.cookie("token", token, {
+        httpOnly: true,
+        sameSite: "Lax",
+        secure: false,
+        maxAge: 24 * 60 * 60 * 1000
+    }).json({
         message: "Login successful",
         role: user.role
     });
@@ -112,14 +112,15 @@ app.post("/qotdanswer", async (req, res) => {
 
 // Get all answers
 app.get("/all-answers", async (req, res) => {
-    try {
-        const answers = await AnswerModel.find()
-            .populate("student", "name email")
-            .sort({ submittedAt: -1 });
-        res.json(answers);
-    } catch {
-        res.status(500).json({ error: "Fetch failed" });
-    }
+  try {
+    const answers = await AnswerModel.find()
+      .populate("student", "name email")
+      .sort({ submittedAt: -1 });
+    res.json(answers);
+  } catch (err) {
+    console.error("Fetch failed:", err);
+    res.status(500).json({ error: "Fetch failed" });
+  }
 });
 
 // Get current user
@@ -133,6 +134,20 @@ app.get("/dashboard", async (req, res) => {
         res.json(user);
     } catch {
         res.status(500).json({ message: "User info error" });
+    }
+});
+//answer-feedback
+app.post("/answer-feedback", async (req, res) => {
+   
+    const { studentId, answerId, isCorrect } = req.body;
+    if (!studentId || !answerId)
+        return res.status(400).json({ error: "Missing data" });
+
+    try {
+        await AnswerModel.findByIdAndUpdate(answerId, { isCorrect });
+        res.json({ message: "Feedback sent" });
+    } catch (err) {
+        res.status(500).json({ error: "Failed to send feedback" });
     }
 });
 

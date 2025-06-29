@@ -1,8 +1,8 @@
-// src/axios.js
-
 import axios from "axios";
 
-// ✅ Automatically send cookies (like JWT) with every request
-axios.defaults.withCredentials = true;
+const instance = axios.create({
+  baseURL: "http://localhost:3001",
+  withCredentials: true // ✅ Must have
+});
 
-export default axios;
+export default instance;
