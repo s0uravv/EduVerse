@@ -97,22 +97,26 @@ const AddQotd = () => {
                     Student Answers
                 </h2>
                 {answers.length > 0 ? (
-                    <div className="overflow-x-auto">
+                    <div className="rounded-xl overflow-x-auto">
                         <table className="w-full text-left border border-gray-300">
-                            <thead className="bg-gray-100">
+                            <thead className="bg-[#0b0625]">
                                 <tr>
-                                    <th className="px-4 py-2 border-b">Name</th>
-                                    <th className="px-4 py-2 border-b">Answer</th>
+                                    <th className="px-4 py-2 border-b text-white">
+                                        Name
+                                    </th>
+                                    <th className="px-4 py-2 border-b text-white">
+                                        Answer
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {answers.map((ans, i) => (
                                     <tr
                                         key={i}
-                                        className="hover:bg-gray-50 cursor-pointer"
+                                        className="hover:bg-[#252539] hover:text-orange-500 text-[#0b0625] font-semibold cursor-pointer"
                                         onClick={() => setSelectedAnswer(ans)}
                                     >
-                                        <td className="px-4 py-2 border-b text-blue-600 underline">
+                                        <td className="font-bold px-4 py-2 border-b hover:bg-[#252539] hover:text-white text-orange-500 underline">
                                             {ans.student?.name || "Unknown"}
                                         </td>
                                         <td className="px-4 py-2 border-b">
@@ -128,37 +132,48 @@ const AddQotd = () => {
                 )}
             </div>
 
-            {/* FEEDBACK MODAL */}
             {selectedAnswer && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-white p-6 rounded-xl w-[90%] max-w-lg relative">
+                <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/30">
+                    <div className="p-6 rounded-xl w-[90%] max-w-lg relative shadow-3xl text-[#0b0625] bg-white">
                         <button
-                            className="absolute top-2 right-2 text-gray-500"
+                            className="absolute top-3 right-4 text-[#0b0625] transition-transform duration-300 hover:rotate-90 text-orange-500 hover:text-red-600"
                             onClick={() => setSelectedAnswer(null)}
                         >
                             ✕
                         </button>
-                        <h3 className="text-xl font-bold mb-4">Student Details</h3>
-                        <p><strong>Name:</strong> {selectedAnswer.student?.name}</p>
-                        <p><strong>Email:</strong> {selectedAnswer.student?.email}</p>
+                        <h3 className="text-xl font-bold mb-4">
+                            Student Details
+                        </h3>
+                        <p>
+                            <strong>Name:</strong>{" "}
+                            {selectedAnswer.student?.name}
+                        </p>
+                        <p>
+                            <strong>Email:</strong>{" "}
+                            {selectedAnswer.student?.email}
+                        </p>
                         <p>
                             <strong>Submitted:</strong>{" "}
-                            {new Date(selectedAnswer.submittedAt).toLocaleString()}
+                            {new Date(
+                                selectedAnswer.submittedAt
+                            ).toLocaleString()}
                         </p>
                         <div className="mt-4">
                             <h4 className="font-semibold mb-2">Answer</h4>
-                            <p className="bg-gray-100 p-3 rounded">{selectedAnswer.answerText}</p>
+                            <p className="bg-gray-100 p-3 rounded">
+                                {selectedAnswer.answerText}
+                            </p>
                         </div>
                         <div className="mt-6 flex justify-between">
                             <button
                                 onClick={() => handleFeedback(true)}
-                                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
                             >
                                 Correct
                             </button>
                             <button
                                 onClick={() => handleFeedback(false)}
-                                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                                className="bg-red-600 text-white px-4 py-2 rounded hover:bg-black/90"
                             >
                                 Wrong
                             </button>
