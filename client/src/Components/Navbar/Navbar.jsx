@@ -14,8 +14,8 @@ function Navbar() {
                             src="/eduverse-logo.png"
                             alt="Logo"
                         />
-                        <p className="text-2xl font-bold text-orange-500 px-2">
-                            EduVerse
+                        <p className="text-xl font-bold text-orange-500 px-2">
+                            DAV Public School Gidi A
                         </p>
                     </div>
                 </Link>
@@ -48,16 +48,16 @@ function Navbar() {
                         <Link to="#">Home</Link>
                     </li>
                     <li>
-                        <Link to="#">About</Link>
+                        <Link to="#">About Exhibition</Link>
                     </li>
                     <li>
-                        <Link to="#">Services</Link>
+                        <Link to="#">Projects</Link>
                     </li>
                     <li>
                         <Link to="#">Contact</Link>
                     </li>
                     <li className="bg-[#040421] text-white rounded-2xl px-2">
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">Developer Contacts</Link>
                     </li>
                 </ul>
             </div>
@@ -72,12 +72,12 @@ function Navbar() {
                         </li>
                         <li>
                             <Link to="#" onClick={() => setIsOpen(false)}>
-                                About
+                                About Exhibition
                             </Link>
                         </li>
                         <li>
                             <Link to="#" onClick={() => setIsOpen(false)}>
-                                Services
+                                Projects
                             </Link>
                         </li>
                         <li>
@@ -86,7 +86,7 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="w-fit bg-[#040421] text-white rounded-2xl px-3 py-1 hover:bg-orange-500">
-                            <Link to="/login">Login</Link>
+                            <Link to="/login">Contact Developers</Link>
                         </li>
                     </ul>
                 </div>
