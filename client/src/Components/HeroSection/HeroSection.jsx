@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FeatureSection from "./FeatureSection";
+import TeacherSection from "./Teacher";
 import Footer from "../Footer/Footer";
 import ProjectSection from "./Project";
 import Navbar from "../Navbar/Navbar";
@@ -60,6 +61,9 @@ const HeroSection = () => {
             </div>
             <div className="max-w-6xl mx-auto">
                 <ProjectSection />
+            </div>
+            <div className="max-w-6xl mx-auto">
+                <TeacherSection />
             </div>
             <div className="max-w-6xl mx-auto">
                 <Footer />
