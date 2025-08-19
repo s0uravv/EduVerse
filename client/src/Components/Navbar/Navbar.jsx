@@ -15,7 +15,7 @@ function Navbar() {
                             alt="Logo"
                         />
                         <p className="text-xl font-bold text-orange-500 px-2">
-                            DAV Public School Gidi A
+                            EduVision
                         </p>
                     </div>
                 </Link>

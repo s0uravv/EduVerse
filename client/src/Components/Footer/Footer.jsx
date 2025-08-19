@@ -12,13 +12,13 @@ const Footer = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
                 {/* Left: Brand Info */}
                 <div>
-                    <h2 className="text-3xl font-bold text-orange-400 mb-4">EduVerse</h2>
+                    <h2 className="text-3xl font-bold text-orange-400 mb-4">EduVision</h2>
                     <p className="text-gray-300 mb-4">
                         Empowering students with performance insights, doubt resolution,
                         and a positive learning environment through technology.
                     </p>
                     <p className="text-sm text-gray-400">
-                        &copy; {new Date().getFullYear()} EduVerse. All rights reserved.
+                        &copy; {new Date().getFullYear()} EduVision. All rights reserved.
                     </p>
                 </div>
 
