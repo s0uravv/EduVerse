@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FeatureSection from "./FeatureSection";
 import Footer from "../Footer/Footer";
+import ProjectSection from "./Project";
 import Navbar from "../Navbar/Navbar";
 
 const HeroSection = () => {
@@ -37,9 +38,11 @@ const HeroSection = () => {
                         </p>
                         {expanded && (
                             <div className="mt-4 p-4 rounded-lg text-white text-sm md:text-base text-justify">
-                                This exhibition showcases groundbreaking ideas from our talented students, 
-                                ranging from technology and AI to eco-friendly innovations. 
-                                Their creativity and hard work reflect the spirit of building a brighter future together.
+                                This exhibition showcases groundbreaking ideas
+                                from our talented students, ranging from
+                                technology and AI to eco-friendly innovations.
+                                Their creativity and hard work reflect the
+                                spirit of building a brighter future together.
                             </div>
                         )}
                         <button
@@ -54,6 +57,9 @@ const HeroSection = () => {
             </section>
             <div className="max-w-6xl mx-auto">
                 <FeatureSection />
+            </div>
+            <div className="max-w-6xl mx-auto">
+                <ProjectSection />
             </div>
             <div className="max-w-6xl mx-auto">
                 <Footer />
