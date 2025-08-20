@@ -3,17 +3,18 @@ import teacher2 from "../../assets/Dutta.jpg";
 import teacher3 from "../../assets/Ghosh.jpg";
 
 const teachers = [
-    {
-        name: "Mr. Swajit Singh",
-        subject: "Chemistry Teacher",
-        guided: "Face Recognition Attendance, Virtual Science Lab",
-        photo: teacher1
-    },
+    
     {
         name: "Mr. D.K Dutta",
         subject: "Physics Teacher",
         guided: "Face Recognition Attendance, Virtual Science Lab",
         photo: teacher2
+    },
+    {
+        name: "Mr. Swajit Singh",
+        subject: "Chemistry Teacher",
+        guided: "Face Recognition Attendance, Virtual Science Lab",
+        photo: teacher1
     },
     {
         name: "Mr. S.R Ghosh",
