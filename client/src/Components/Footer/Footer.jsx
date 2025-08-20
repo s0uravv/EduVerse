@@ -1,5 +1,5 @@
 import React from "react";
-import sourav from "../../assets/sourav.jpg";
+import sourav from "../../assets/so.jpg";
 import {
     Facebook,
     Instagram,
@@ -149,7 +149,10 @@ const Footer = () => {
 
                 {/* Designed By Line */}
                 <p className="mt-6 text-sm text-gray-400">
-                    Designed & Developed by <span className="text-orange-300 font-semibold">Sourav Pandey</span>
+                    Designed & Developed by{" "}
+                    <span className="text-orange-300 font-semibold">
+                        Sourav Pandey
+                    </span>
                 </p>
             </motion.div>
         </footer>
