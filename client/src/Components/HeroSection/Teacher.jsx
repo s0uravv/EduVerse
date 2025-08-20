@@ -12,8 +12,8 @@ const teachers = [
     {
         name: "Mr. B.K Pandey",
         subject: "Physics Teacher",
-        guided: "Face Recognition Attendance, Virtual Science Lab",
-       // photo: teacher2
+        guided: "Face Recognition Attendance, Virtual Science Lab"
+        // photo: teacher2
     },
     {
         name: "Mr. Swajit Singh",
@@ -24,8 +24,8 @@ const teachers = [
     {
         name: "Mr. Vijay Sah",
         subject: "Chemistry Teacher",
-        guided: "Face Recognition Attendance, Virtual Science Lab",
-       // photo: teacher1
+        guided: "Face Recognition Attendance, Virtual Science Lab"
+        // photo: teacher1
     },
     {
         name: "Mr. S.R Ghosh",
@@ -36,14 +36,14 @@ const teachers = [
     {
         name: "Mr. Sandeep Mahto",
         subject: "Biology Teacher",
-        guided: "Smart Irrigation System, Renewable Energy",
-       // photo: teacher3
+        guided: "Smart Irrigation System, Renewable Energy"
+        // photo: teacher3
     }
 ];
 
 export default function TeachersSection() {
     return (
-        <div className="py-16 px-8 bg-gray-900">
+        <div className="py-16 px-8 bg-[#0b0625]">
             <h2 className="text-4xl font-bold text-center text-orange-500 mb-12">
                 Our Mentors & Guides
             </h2>
@@ -52,7 +52,7 @@ export default function TeachersSection() {
                 {teachers.map((teacher, idx) => (
                     <div
                         key={idx}
-                        className="bg-white/5 backdrop-blur-md border-2 border-orange-500 rounded-2xl p-6 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-orange-500/50"
+                        className="bg-white/5 backdrop-blur-lg border-2 border-orange-500 rounded-2xl p-6 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-orange-500/50"
                     >
                         <img
                             src={teacher.photo}
