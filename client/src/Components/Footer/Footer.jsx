@@ -125,11 +125,11 @@ const Footer = () => {
                 {/* Animated Social Links */}
                 <div className="flex justify-center gap-8 mt-6">
                     {[
-                        { icon: <Github className="w-6 h-6" />, link: "#" },
+                        { icon: <Github className="w-6 h-6" />, link: "https://github.com/s0uravv" },
                         { icon: <Code className="w-6 h-6" />, link: "#" },
-                        { icon: <Globe className="w-6 h-6" />, link: "#" },
-                        { icon: <Facebook className="w-6 h-6" />, link: "#" },
-                        { icon: <Twitter className="w-6 h-6" />, link: "#" },
+                        { icon: <Globe className="w-6 h-6" />, link: "https://leetcode.com/u/the-sourav-pandey/" },
+                        { icon: <Facebook className="w-6 h-6" />, link: "https://www.facebook.com/share/16nZjVeDCb/" },
+                        { icon: <Twitter className="w-6 h-6" />, link: "https://x.com/Sourav_404?t=ln6c2qAwVzjVOuP2fiNHzw&s=09" },
                         { icon: <Instagram className="w-6 h-6" />, link: "#" }
                     ].map((item, i) => (
                         <motion.a
