@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import pinataImg from "../../assets/H.jpg";
 import pinataGroup from "../../assets/A.jpg";
 import sampleVideo from "../../assets/sample.mp4";
@@ -15,7 +16,7 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -26,7 +27,7 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -37,7 +38,7 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -48,7 +49,17 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    }, {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -59,7 +70,7 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -70,7 +81,7 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -81,7 +92,7 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -92,7 +103,115 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     },
-    {
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    }, {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    }, {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+     {
         name: "Pinata",
         shortDesc: "Manage your digital files efficiently.",
         image: pinataImg,
@@ -103,6 +222,7 @@ const projects = [
         guidedBy: "Mr. Sharma",
         video: sampleVideo
     }
+    // ...baaki projects same rehne do
 ];
 
 export default function ProjectSection() {
@@ -112,168 +232,215 @@ export default function ProjectSection() {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
-        <div className="p-8 min-h-screen bg-gray-100">
-            <h2 className="text-4xl font-bold mb-12 text-center text-orange-500 animate-pulse">
+        <div className="relative p-8 min-h-screen text-white overflow-hidden">
+            {/* Animated Gradient Background (footer jaisa) */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0b6025] via-black to-[#0b6025] animate-gradient bg-[length:200%_200%]"></div>
+
+            <motion.h2
+                className="text-5xl font-extrabold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-yellow-300 to-orange-500 drop-shadow-lg"
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, type: "spring" }}
+            >
                 Projects
-            </h2>
+            </motion.h2>
 
             {/* Project Cards */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-10">
                 {projects.map((project, idx) => {
                     const isExpanded = expandedIndex === idx;
                     return (
-                        <div
+                        <motion.div
                             key={idx}
-                            className={`relative rounded-xl overflow-hidden cursor-pointer transform transition-all duration-500 hover:scale-105 hover:rotate-1 shadow-2xl shadow-orange-500/50`}
-                            style={{ height: isExpanded ? "220px" : "180px" }}
+                            layout
                             onClick={() =>
                                 setExpandedIndex(isExpanded ? null : idx)
                             }
+                            whileHover={{ scale: 1.05, rotate: 1 }}
+                            transition={{
+                                layout: { duration: 0.6, type: "spring" }
+                            }}
+                            className="relative rounded-2xl overflow-hidden cursor-pointer shadow-2xl shadow-orange-500/50 border-2 border-orange-500/70"
+                            style={{ height: isExpanded ? "240px" : "190px" }}
                         >
-                            <img
+                            <motion.img
                                 src={project.image}
                                 alt={project.name}
-                                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                                className="w-full h-full object-cover"
+                                whileHover={{ scale: 1.12 }}
+                                transition={{ duration: 0.5 }}
                             />
-                            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-4 transition-all duration-500">
-                                <h3 className="text-white font-bold text-lg">
+                            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent p-5">
+                                <h3 className="text-white font-extrabold text-xl drop-shadow-md">
                                     {project.name}
                                 </h3>
-                                {isExpanded && (
-                                    <div className="mt-2 opacity-0 animate-fadeIn">
-                                        <p className="text-white text-sm">
-                                            {project.shortDesc}
-                                        </p>
-                                        <button
-                                            onClick={e => {
-                                                e.stopPropagation();
-                                                setModalProject(project);
-                                                setFlipped(false);
-                                                setShowVideo(false);
-                                            }}
-                                            className="mt-2 px-3 py-1 border-2 border-orange-500 text-white rounded hover:shadow-lg hover:shadow-orange-500/50 transition-all duration-300"
+                                <AnimatePresence>
+                                    {isExpanded && (
+                                        <motion.div
+                                            className="mt-2"
+                                            initial={{ opacity: 0, y: 15 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: 15 }}
+                                            transition={{ duration: 0.4 }}
                                         >
-                                            Read More
-                                        </button>
-                                    </div>
-                                )}
+                                            <p className="text-gray-200 text-sm italic">
+                                                {project.shortDesc}
+                                            </p>
+                                            <button
+                                                onClick={e => {
+                                                    e.stopPropagation();
+                                                    setModalProject(project);
+                                                    setFlipped(false);
+                                                    setShowVideo(false);
+                                                }}
+                                                className="mt-3 px-4 py-2 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-600 rounded-lg font-semibold text-black hover:scale-105 transform transition duration-300 shadow-lg shadow-orange-500/40"
+                                            >
+                                                Read More
+                                            </button>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
-                        </div>
+                        </motion.div>
                     );
                 })}
             </div>
 
             {/* Modal */}
-            {modalProject && !showVideo && (
-                <div className="fixed inset-0 backdrop-blur-sm bg-black/30 flex items-center justify-center z-50 p-4">
-                    <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl p-6 border-4 border-orange-500 shadow-2xl shadow-orange-500/50 bg-white/0 backdrop-blur-md transform transition-all duration-500 scale-95 animate-modalOpen">
-                        <button
-                            onClick={() => setModalProject(null)}
-                            className="absolute top-4 right-4 text-gray-200 hover:text-white text-3xl font-bold z-50"
+            <AnimatePresence>
+                {modalProject && !showVideo && (
+                    <motion.div
+                        className="fixed inset-0 backdrop-blur-md bg-black/40 flex items-center justify-center z-50 p-6"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <motion.div
+                            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl p-8 border-4 border-orange-500 shadow-2xl shadow-orange-500/50 bg-gradient-to-r from-[#0b6025] via-black to-[#0b6025] animate-gradient bg-[length:200%_200%]"
+                            initial={{ scale: 0.85, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.85, opacity: 0 }}
+                            transition={{ duration: 0.5, type: "spring" }}
                         >
-                            &times;
-                        </button>
-                        <h2 className="text-3xl font-bold mb-6 text-orange-500">
-                            {modalProject.name}
-                        </h2>
-
-                        {/* Flip Card */}
-                        <div
-                            className="w-full h-64 perspective mb-6"
-                            onClick={() => setFlipped(!flipped)}
-                        >
-                            <div
-                                className={`relative w-full h-full duration-700 transform-style-preserve-3d ${
-                                    flipped ? "rotate-y-180" : ""
-                                }`}
+                            <button
+                                onClick={() => setModalProject(null)}
+                                className="absolute top-3 right-4 text-white hover:text-orange-400 text-4xl font-bold z-50"
                             >
-                                {/* Front */}
-                                <div className="absolute w-full h-full backface-hidden">
-                                    <img
-                                        src={modalProject.image}
-                                        alt="Project"
-                                        className="w-full h-full object-cover rounded"
-                                    />
-                                </div>
-                                {/* Back */}
-                                <div className="absolute w-full h-full backface-hidden rotate-y-180">
-                                    <img
-                                        src={modalProject.groupImage}
-                                        alt="Group"
-                                        className="w-full h-full object-cover rounded"
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                                &times;
+                            </button>
+                            <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-300">
+                                {modalProject.name}
+                            </h2>
 
-                        {/* Description */}
-                        <p className="mb-2 text-lg text-white">
-                            {modalProject.fullDesc}
-                        </p>
-                        <p className="text-gray-200 mb-1">
-                            Creator: {modalProject.creator}
-                        </p>
-                        <p className="text-gray-200 mb-4">
-                            Guided By: {modalProject.guidedBy}
-                        </p>
+                            {/* Flip Card */}
+                            <motion.div
+                                className="w-full h-72 perspective mb-6 cursor-pointer"
+                                onClick={() => setFlipped(!flipped)}
+                            >
+                                <motion.div
+                                    className="relative w-full h-full"
+                                    animate={{ rotateY: flipped ? 180 : 0 }}
+                                    transition={{ duration: 0.8 }}
+                                    style={{ transformStyle: "preserve-3d" }}
+                                >
+                                    {/* Front */}
+                                    <div className="absolute w-full h-full backface-hidden">
+                                        <img
+                                            src={modalProject.image}
+                                            alt="Project"
+                                            className="w-full h-full object-cover rounded-xl"
+                                        />
+                                    </div>
+                                    {/* Back */}
+                                    <div className="absolute w-full h-full backface-hidden rotate-y-180">
+                                        <img
+                                            src={modalProject.groupImage}
+                                            alt="Group"
+                                            className="w-full h-full object-cover rounded-xl"
+                                        />
+                                    </div>
+                                </motion.div>
+                            </motion.div>
 
-                        <button
-                            onClick={() => setShowVideo(true)}
-                            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                        >
-                            Working Demo
-                        </button>
-                    </div>
-                </div>
-            )}
+                            {/* Description */}
+                            <p className="mb-3 text-lg leading-relaxed text-gray-200 italic">
+                                {modalProject.fullDesc}
+                            </p>
+                            <p className="text-orange-400 font-bold mb-1">
+                                Creator:{" "}
+                                <span className="text-yellow-300 font-semibold">
+                                    {modalProject.creator}
+                                </span>
+                            </p>
+                            <p className="text-orange-400 font-bold mb-6">
+                                Guided By:{" "}
+                                <span className="text-green-300 font-semibold">
+                                    {modalProject.guidedBy}
+                                </span>
+                            </p>
+
+                            <button
+                                onClick={() => setShowVideo(true)}
+                                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:scale-105 transition-transform shadow-lg shadow-blue-500/50"
+                            >
+                                🎬 Watch Demo
+                            </button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Video Overlay */}
-            {showVideo && (
-                <div className="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center z-50 p-4">
-                    <div className="relative w-full max-w-4xl rounded-2xl border-4 border-orange-500 shadow-2xl shadow-orange-500/50 bg-black/80 p-4">
-                        <button
-                            onClick={() => setShowVideo(false)}
-                            className="absolute top-2 right-3 text-white text-3xl font-bold"
+            <AnimatePresence>
+                {showVideo && (
+                    <motion.div
+                        className="fixed inset-0 bg-black/70 backdrop-blur-lg flex items-center justify-center z-50 p-6"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <motion.div
+                            className="relative w-full max-w-4xl rounded-2xl border-4 border-orange-500 shadow-2xl shadow-orange-500/50 bg-gradient-to-r from-[#0b6025] via-black to-[#0b6025] animate-gradient bg-[length:200%_200%] p-6"
+                            initial={{ scale: 0.85, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.85, opacity: 0 }}
+                            transition={{ duration: 0.5 }}
                         >
-                            &times;
-                        </button>
-                        <video
-                            src={modalProject.video}
-                            controls
-                            autoPlay
-                            className="w-full rounded"
-                        />
-                    </div>
-                </div>
-            )}
+                            <button
+                                onClick={() => setShowVideo(false)}
+                                className="absolute top-3 right-4 text-white hover:text-red-400 text-4xl font-bold"
+                            >
+                                &times;
+                            </button>
+                            <video
+                                src={modalProject.video}
+                                controls
+                                autoPlay
+                                className="w-full rounded-xl border-2 border-orange-400"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
-            {/* Animations */}
+            {/* Extra CSS for Flip + Gradient Animation */}
             <style>{`
         .perspective {
           perspective: 1000px;
         }
-        .transform-style-preserve-3d {
-          transform-style: preserve-3d;
+        .backface-hidden {
+          backface-visibility: hidden;
         }
         .rotate-y-180 {
           transform: rotateY(180deg);
         }
-        .backface-hidden {
-          backface-visibility: hidden;
+        .animate-gradient {
+          animation: gradientMove 8s ease infinite;
         }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.5s forwards;
-        }
-        @keyframes modalOpen {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
-        }
-        .animate-modalOpen {
-          animation: modalOpen 0.4s forwards;
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
       `}</style>
         </div>
