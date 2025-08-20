@@ -1,4 +1,5 @@
 import React from "react";
+import sourav from "../../assets/sourav.jpg";
 import {
     Facebook,
     Instagram,
@@ -111,7 +112,7 @@ const Footer = () => {
                 {/* Profile Photo */}
                 <motion.img
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    src="/sourav.jpg" // <-- apni photo ka path daalna
+                    src={sourav} // <-- apni photo ka path daalna
                     alt="Sourav Pandey"
                     className="w-24 h-24 rounded-full mx-auto border-4 border-orange-400 shadow-lg mb-4"
                 />
