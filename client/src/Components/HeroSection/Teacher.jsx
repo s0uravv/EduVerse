@@ -1,4 +1,6 @@
 import teacher1 from "../../assets/Swajit.jpg";
+import teacher6 from "../../assets/sandip.jpg";
+import teacher5 from "../../assets/vijay.jpg";
 import teacher4 from "../../assets/bablu.jpg";
 import teacher2 from "../../assets/Dutta.jpg";
 import teacher3 from "../../assets/Ghosh.jpg";
@@ -22,24 +24,24 @@ const teachers = [
         guided: "Face Recognition Attendance, Virtual Science Lab",
         photo: teacher1
     },
-    // {
-    //     name: "Mr. Vijay Sah",
-    //     subject: "Chemistry Teacher",
-    //     guided: "Face Recognition Attendance, Virtual Science Lab"
-    //     // photo: teacher1
-    // },
+    {
+        name: "Mr. Vijay Sah",
+        subject: "Chemistry Teacher",
+        guided: "Face Recognition Attendance, Virtual Science Lab",
+         photo: teacher5
+    },
     {
         name: "Mr. S.R Ghosh",
         subject: "Biology Teacher",
         guided: "Smart Irrigation System, Renewable Energy",
         photo: teacher3
+    },
+     {
+        name: "Mr. Sandeep Mahto",
+        subject: "Biology Teacher",
+        guided: "Smart Irrigation System, Renewable Energy",
+         photo: teacher6
     }
-    // {
-    //     name: "Mr. Sandeep Mahto",
-    //     subject: "Biology Teacher",
-    //     guided: "Smart Irrigation System, Renewable Energy"
-    //     // photo: teacher3
-    // }
 ];
 
 export default function TeachersSection() {
