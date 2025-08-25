@@ -5,71 +5,71 @@ import pinataGroup from "../../assets/group.jpg";
 import sampleVideo from "../../assets/sample.mp4";
 
 const projects = [
-    // {
-    //     name: "Pinata",
-    //     shortDesc: "Manage your digital files efficiently.",
-    //     image: pinataImg,
-    //     groupImage: pinataGroup,
-    //     fullDesc:
-    //         "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
-    //     creator: "Team Alpha",
-    //     guidedBy: "Mr. Sharma",
-    //     video: sampleVideo
-    // },
-    // {
-    //     name: "Pinata",
-    //     shortDesc: "Manage your digital files efficiently.",
-    //     image: pinataImg,
-    //     groupImage: pinataGroup,
-    //     fullDesc:
-    //         "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
-    //     creator: "Team Alpha",
-    //     guidedBy: "Mr. Sharma",
-    //     video: sampleVideo
-    // },
-    // {
-    //     name: "Pinata",
-    //     shortDesc: "Manage your digital files efficiently.",
-    //     image: pinataImg,
-    //     groupImage: pinataGroup,
-    //     fullDesc:
-    //         "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
-    //     creator: "Team Alpha",
-    //     guidedBy: "Mr. Sharma",
-    //     video: sampleVideo
-    // },
-    // {
-    //     name: "Pinata",
-    //     shortDesc: "Manage your digital files efficiently.",
-    //     image: pinataImg,
-    //     groupImage: pinataGroup,
-    //     fullDesc:
-    //         "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
-    //     creator: "Team Alpha",
-    //     guidedBy: "Mr. Sharma",
-    //     video: sampleVideo
-    // },
-    // {
-    //     name: "Pinata",
-    //     shortDesc: "Manage your digital files efficiently.",
-    //     image: pinataImg,
-    //     groupImage: pinataGroup,
-    //     fullDesc:
-    //         "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
-    //     creator: "Team Alpha",
-    //     guidedBy: "Mr. Sharma",
-    //     video: sampleVideo
-    // }, {
-    //     name: "Pinata",
-    //     shortDesc: "Manage your digital files efficiently.",
-    //     image: pinataImg,
-    //     groupImage: pinataGroup,
-    //     fullDesc:
-    //         "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
-    //     creator: "Team Alpha",
-    //     guidedBy: "Mr. Sharma",
-    //     video: sampleVideo
-    // },
+     {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+    {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+    {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+    {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
+    {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    }, {
+        name: "Pinata",
+        shortDesc: "Manage your digital files efficiently.",
+        image: pinataImg,
+        groupImage: pinataGroup,
+        fullDesc:
+            "Pinata is a decentralized file management project that allows users to store and manage data securely on the cloud. Speed, security, and reliability are its main features.",
+        creator: "Team Alpha",
+        guidedBy: "Mr. Sharma",
+        video: sampleVideo
+    },
     // {
     //     name: "Pinata",
     //     shortDesc: "Manage your digital files efficiently.",
